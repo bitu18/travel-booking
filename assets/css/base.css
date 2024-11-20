@@ -1,0 +1,76 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color-1: #9a9a9a;
+    --text-color-2: #555555;
+    --blue-color: #14b9d5;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.underline-effect {
+    position: relative;
+    z-index: 1;
+}
+
+.underline-effect::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 5px;
+    left: 0;
+    right: 0;
+    bottom: 11px;
+    z-index: -9;
+}
+
+.underline-effect--purple.underline-effect::after {
+    background-color: #ba71da;
+}
+
+.underline-effect--green.underline-effect::after {
+    background-color: #1bbc9b;
+}
+
+.underline-effect--orange.underline-effect::after {
+    background-color: #f76570;
+}
+
+.underline-effect-blue.underline-effect::after {
+    background-color: #14b9d5;
+}
+
+
+/* Animation */
+@keyframes FadeIn {
+    form {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes Growth {
+    from {
+        transition: 0s;
+        opacity: 0;
+    }
+
+    to {
+        transition: 1s;
+        opacity: 1;
+    }
+}
